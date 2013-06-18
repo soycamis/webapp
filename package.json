@@ -13,5 +13,9 @@
   "author": "",
   "license": "BSD",
   "readmeFilename": "README.md",
-  "gitHead": "1e78c1e19861b96a0f795977a999528d7b6e57e3"
+  "gitHead": "1e78c1e19861b96a0f795977a999528d7b6e57e3",
+  "dependencies": {
+    "express": "~3.2.6",
+    "jade": "~0.31.2"
+  }
 }
