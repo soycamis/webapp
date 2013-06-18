@@ -9,6 +9,9 @@ module.exports = function (grunt) {
                 jshintrc: '.jshintrc'
             }
         },
+        mocha_phantomjs: {
+            all: ['']
+        },
         mochacli: {
             options: {
                 bail: true,
