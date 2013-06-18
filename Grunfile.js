@@ -19,11 +19,11 @@ module.exports = function (grunt) {
         stylus: {
             compile: {
                 options: {
-                    compress: true,
+                    compress: false,
                     use: [require('fluidity')]
                 },
                 files: {
-                    'public/css/app.css': 'public/app/assets/stylus/app.styl'
+                    'public/app/assets/css/app.css': 'public/app/assets/stylus/app.styl'
                 }
             }
         },
