@@ -7,7 +7,9 @@ var express = require('express'),
 app.configure(function () {
     app.set('views', path.join(__dirname, 'app/views'));
     app.set('view engine', 'jade');
+
     app.use(app.router);
+    app.use(express.static(path.join(__dirname, 'public')));
 });
 
 

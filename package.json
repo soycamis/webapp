@@ -13,5 +13,10 @@
   "author": "",
   "license": "BSD",
   "readmeFilename": "README.md",
-  "gitHead": "1e78c1e19861b96a0f795977a999528d7b6e57e3"
+  "gitHead": "1e78c1e19861b96a0f795977a999528d7b6e57e3",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-contrib-jshint": "~0.6.0"
+  }
 }
