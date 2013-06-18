@@ -16,6 +16,17 @@ module.exports = function (grunt) {
                 reporter: 'spec'
             }
         },
+        stylus: {
+            compile: {
+                options: {
+                    compress: true,
+                    use: [require('fluidity')]
+                },
+                files: {
+                    'public/css/app.css': 'public/app/assets/stylus/app.styl'
+                }
+            }
+        },
         requirejs: {
             dist: {
                 options: {
