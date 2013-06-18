@@ -1,0 +1,17 @@
+{
+  "name": "webapp",
+  "version": "0.0.1",
+  "description": "webapp ======",
+  "main": "Grunfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/proudplaces/webapp.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "1e78c1e19861b96a0f795977a999528d7b6e57e3"
+}
