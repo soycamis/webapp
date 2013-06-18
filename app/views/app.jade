@@ -2,19 +2,23 @@ extends layout
 
 block stylesheets
     if locals.dev == 'production'
-        link(rel="stylesheet", href="css/app.min.css")
-    else
         link(rel="stylesheet", href="css/app.css")
+    else
+        link(rel="stylesheet", href="app/assets/css/app.css")
 
 block main
     div(id="map")
     header
         h1(class="brand") Webapp
-        section(class="user_section")
-            
+        section(class="user_bar")
+            button(class="btn", id="loginBtn")
+            button(class="btn", id="registerBtn")
+
+            img(src="", class="avatar")
+            |  Nombre de usuario 
 
 block javascripts
     if locals.dev == 'production'
-        script(src="js/app.min.js")
+        script(src="js/app.js")
     else
         script(src="vendor/requirejs/require.js", data-main="js/app/main")
