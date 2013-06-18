@@ -1,0 +1,16 @@
+extends layout
+
+block stylesheet
+    if dev = 'development'
+        link(rel="stylesheet", href="css/app.min.css")
+    else
+        link(rel="stylesheet", href="css/app.css")
+
+block main
+    div(id="map")
+
+block javascripts
+    if dev = 'development'
+        script(src="vendor/requirejs/require.js", data-main="js/app/main")
+    else
+        script(src="js/app.min.js")

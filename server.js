@@ -16,14 +16,9 @@ app.configure('development', function () {
     app.locals.env = 'development';
 });
 
-app.configure('production', function () {
-    app.locals.env = 'production';
-});
-
-
 
 app.get('/', function (req, res) {
-    res.render('layout.jade');
+    res.render('app.jade');
 });
 
 server.listen(8000, function () {
