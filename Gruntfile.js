@@ -7,10 +7,14 @@ module.exports = function (grunt) {
         jshint: {
             options: {
                 jshintrc: '.jshintrc'
-            }
+            },
+            front: [
+                'public/test/{,*/}*.js',
+                '!public/test/lib/{,*/}*.js'
+            ]
         },
         mocha_phantomjs: {
-            all: ['']
+            all: ['public/test/{,*/}*.html']
         },
         mochacli: {
             options: {
@@ -60,6 +64,14 @@ module.exports = function (grunt) {
                           'public/js/templates']
                 }]
             }
+        },
+        watch: {
+            front: {
+                files: ['public/test/{,*/}*.js', 'public/app/{,*/}*.js'],
+                tasks: ['test_front']
+            }
         }
     });
+
+    grunt.registerTask('test_front', ['jshint:front', 'mocha_phantomjs']);
 };

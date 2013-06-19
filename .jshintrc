@@ -1,6 +1,4 @@
 {
-    "maxerr": 5,
-
     "bitwise"  : true,
     "camelcase": false,
     "curly"    : true,
@@ -16,10 +14,10 @@
     "undef"    : true,
     "unused"   : true,
     "strict"   : true,
-    "maxlen"   : 80,
+    "maxlen"   : 90,
     "maxparams": 3,
     "evil"     : false,
-    "onevar"   : true
+    "onevar"   : true,
 
     "browser": true,
     "node"   : true,
