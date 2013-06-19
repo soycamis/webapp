@@ -9,5 +9,9 @@
     "underscore-amd": "~1.4.4",
     "jquery": "~2.0.2",
     "leaflet": "~0.5.1"
+  },
+  "devDependencies": {
+    "mocha": "~1.11.0",
+    "sinon": "~1.7.1"
   }
 }

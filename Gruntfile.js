@@ -37,7 +37,8 @@ module.exports = function (grunt) {
                     dir: 'public/dist',
                     mainConfigFile: 'public/js/app/main.js',
                     name: 'main',
-                    optimize: 'uglify'
+                    optimize: 'uglify',
+                    preserveLicenseComments: false
                 }
             }
         },
