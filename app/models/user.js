@@ -2,9 +2,9 @@
 
 var Users,
 	UsersSchema,
-	PlacesSchema = require('./places').PlacesSchema,	
+	PlacesSchema = require('./places').PlacesSchema,
 	mongoose = require('mongoose'),
-	Schema   = mongoose.Schema;	
+	Schema   = mongoose.Schema;
 
 UsersSchema = new Schema({
     createAt    : {type: Date, 'default': Date.now},
