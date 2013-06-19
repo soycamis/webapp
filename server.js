@@ -1,3 +1,5 @@
+'use strict';
+
 var express = require('express'),
     app     = express(),
     path    = require('path'),
@@ -12,10 +14,9 @@ app.configure(function () {
     app.use(express.static(path.join(__dirname, 'public')));
 });
 
-
 //enviroments
-app.configure('development', function () {
-    app.locals.env = 'development';
+app.configure('production', function () {
+    app.locals.env = 'production';
 });
 
 

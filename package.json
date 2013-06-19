@@ -29,6 +29,7 @@
     "chai": "~1.7.0",
     "fluidity": "~0.1.5",
     "stylus": "~0.32.1",
-    "grunt-mocha-phantomjs": "~0.2.8"
+    "grunt-mocha-phantomjs": "~0.2.8",
+    "grunt-mocha-cli": "~1.0.6"
   }
 }

@@ -9,8 +9,16 @@ module.exports = function (grunt) {
                 jshintrc: '.jshintrc'
             },
             front: [
+                'public/app/**/*.js',
+                '!public/app/vendor/**/*.js',
                 'public/test/{,*/}*.js',
-                '!public/test/lib/{,*/}*.js'
+                '!public/test/lib/**/*.js'
+            ],
+            back: [
+                'app/**/*.js',
+                'test/**/*.js',
+                '*.js',
+                '!node_modules/**/*.js'
             ]
         },
         mocha_phantomjs: {
@@ -21,7 +29,8 @@ module.exports = function (grunt) {
                 bail: true,
                 debug: true,
                 reporter: 'spec'
-            }
+            },
+            all: ['test/**/*.js']
         },
         stylus: {
             compile: {
@@ -37,12 +46,11 @@ module.exports = function (grunt) {
         requirejs: {
             dist: {
                 options: {
-                    baseUrl: 'public/js/app',
-                    dir: 'public/dist',
-                    mainConfigFile: 'public/js/app/main.js',
-                    name: 'main',
+                    baseUrl: 'public/app',
+                    dir: 'public/js',
+                    mainConfigFile: 'public/app/main.js',
                     optimize: 'uglify',
-                    preserveLicenseComments: false
+                    preserveLicenseComments: true
                 }
             }
         },
@@ -60,18 +68,24 @@ module.exports = function (grunt) {
                           'public/js/views',
                           'public/js/build.txt',
                           'public/js/collections',
-                          'public/js/model',
-                          'public/js/templates']
+                          'public/js/models',
+                          'public/js/assets']
                 }]
             }
         },
         watch: {
             front: {
-                files: ['public/test/{,*/}*.js', 'public/app/{,*/}*.js'],
+                files: ['public/test/**/*.js', 'public/app/**/*.js'],
                 tasks: ['test_front']
+            },
+            back: {
+                files: ['app/**/*.js', 'test/**/*.js'],
+                tasks: ['test_back']
             }
         }
     });
 
     grunt.registerTask('test_front', ['jshint:front', 'mocha_phantomjs']);
+    grunt.registerTask('test_back', ['jshint:back', 'mochacli']);
+    grunt.registerTask('build', ['clean:dist', 'requirejs', 'clean:rjs']);
 };
