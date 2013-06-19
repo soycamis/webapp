@@ -17,7 +17,7 @@ require(['require', 'mocha'], function (require, mocha) {
 
     mocha.setup('bdd');
 
-    require(['test/app'], function () {
+    require([], function () {
         (window.mochaPhantomJS || mocha).run();
     });
 });

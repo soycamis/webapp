@@ -75,11 +75,11 @@ module.exports = function (grunt) {
         },
         watch: {
             front: {
-                files: ['public/test/**/*.js', 'public/app/**/*.js'],
+                files: ['public/test/{,*/}*.js', 'public/app/{,*/}*.js'],
                 tasks: ['test_front']
             },
             back: {
-                files: ['app/**/*.js', 'test/**/*.js'],
+                files: ['app/{,*/}*.js', 'test/**/*.js'],
                 tasks: ['test_back']
             }
         }
