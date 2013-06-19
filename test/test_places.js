@@ -1,10 +1,13 @@
-var Places = require('../app/models/places'),
-    expect = require('chai').expect;
+require('./utils');
+
+var ValidationError = require('mongoose').Error.ValidationError,
+    Places         = require('../app/models/places'),
+    expect         = require('chai').expect;
 
 describe('#Places', function () {
     'use strict';
 
-    before(function () {
+    beforeEach(function () {
         this.place = new Places({
             name: 'Salto Jimenoa',
             description: 'Este es un lugar bonito',
@@ -45,10 +48,17 @@ describe('#Places', function () {
     });
 
     describe('@Save', function () {
+        it('should return throw if geo not exists', function (done) {
+            this.place.geo = undefined;
 
+            this.place.save(function (err) {
+                expect(err).to.be.a.instanceOf(ValidationError);
+                done();
+            });
+        });
     });
 
-    after(function () {
+    afterEach(function () {
         this.place = null;
     });
 });

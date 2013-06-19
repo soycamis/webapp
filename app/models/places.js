@@ -7,8 +7,8 @@ PlacesSchema = new Schema({
     name: { type: String, required: true },
     description: { type: String },
     geo: {
-        type: { type: String },
-        coord: { type: Array }
+        type: { type: String, required: true },
+        coord: { type: Array, required: true }
     }
 });
 
