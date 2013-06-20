@@ -1,8 +1,8 @@
 require('./utils');
 
 var ValidationError = require('mongoose').Error.ValidationError,
-    Places         = require('../app/models/places'),
-    expect         = require('chai').expect;
+    Places          = require('../app/models/places'),
+    expect          = require('chai').expect;
 
 describe('#Places', function () {
     'use strict';
@@ -55,6 +55,10 @@ describe('#Places', function () {
                 expect(err).to.be.a.instanceOf(ValidationError);
                 done();
             });
+        });
+
+        it('should save place', function (done) {
+            this.place.save(done);
         });
     });
 

@@ -1,6 +1,6 @@
-'use stric';
+'use strict';
 
-var Users,
+var User,
 	UsersSchema,
 	PlacesSchema = require('./places').PlacesSchema,
 	mongoose = require('mongoose'),
@@ -27,4 +27,4 @@ UsersSchema.statics.findOrCreate = function (profile, done) {
     });
 };
 
-Users = module.exports = mongoose.model('user', UsersSchema);
+User = module.exports = mongoose.model('user', UsersSchema);

@@ -30,7 +30,7 @@ module.exports = function (grunt) {
                 debug: true,
                 reporter: 'spec'
             },
-            all: ['test/**/*.js']
+            all: ['test/**/test_*.js']
         },
         stylus: {
             compile: {
@@ -75,7 +75,7 @@ module.exports = function (grunt) {
         },
         watch: {
             front: {
-                files: ['public/test/{,*/}*.js', 'public/app/{,*/}*.js'],
+                files: ['public/test/**/*.js', 'public/app/{,*/}*.js'],
                 tasks: ['test_front']
             },
             back: {
@@ -87,5 +87,6 @@ module.exports = function (grunt) {
 
     grunt.registerTask('test_front', ['jshint:front', 'mocha_phantomjs']);
     grunt.registerTask('test_back', ['jshint:back', 'mochacli']);
+    grunt.registerTask('test', ['test_front', 'test_back']);
     grunt.registerTask('build', ['clean:dist', 'requirejs', 'clean:rjs']);
 };
