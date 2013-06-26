@@ -4,6 +4,8 @@ block stylesheets
     if locals.dev == 'production'
         link(rel="stylesheet", href="css/app.css")
     else
+        link(rel="stylesheet", href="app/vendor/normalize-css/normalize.css")
+        link(rel="stylesheet", href="app/vendor/leaflet/dist/leaflet.css")
         link(rel="stylesheet", href="app/assets/css/app.css")
 
 block main

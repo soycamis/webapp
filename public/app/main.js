@@ -12,6 +12,9 @@ require.config({
     shim: {
         'Handlebars': {
             exports: 'Handlebars'
+        },
+        'leaflet': {
+            exports: 'L'
         }
     }
 });
