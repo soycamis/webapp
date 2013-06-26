@@ -50,10 +50,7 @@ block javascripts
     if locals.dev == 'production'
         script(src="js/main.js")
     else
-        //- script(src="app/vendor/requirejs/require.js", data-main="app/main")
-        script(src="app/vendor/jquery/jquery.js")
-        script(src="app/vendor/underscore-amd/underscore.js")
-        script(src="app/vendor/backbone-amd/backbone.js")
+        script(src="app/vendor/requirejs/require.js", data-main="app/main")
 
 
 

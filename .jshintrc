@@ -15,7 +15,7 @@
     "unused"   : true,
     "strict"   : true,
     "maxlen"   : 90,
-    "maxparams": 3,
+    "maxparams": 5,
     "evil"     : false,
     "onevar"   : true,
 

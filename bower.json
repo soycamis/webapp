@@ -9,6 +9,7 @@
     "underscore-amd": "~1.4.4",
     "jquery": "~2.0.2",
     "leaflet": "~0.5.1",
-    "text": "~2.0.7"
+    "text": "~2.0.7",
+    "cartodb.js": "~2.0.28"
   }
 }
